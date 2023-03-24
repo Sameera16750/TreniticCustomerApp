@@ -1,0 +1,91 @@
+.form-main{
+  padding-bottom:0.5rem;
+  width: 100%;
+  position: relative;
+}
+.form-group {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-group:focus-visible,
+.form-control:focus-visible
+{
+  border: none;
+  outline: none;
+}
+
+.form-control {
+  font-size: 0.9rem;
+  padding: 0.5rem 0 0.5rem 0.5rem ;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 96%;
+  outline: none;
+}
+
+.form-control:focus{
+  border: 1px solid #1890ff;
+}
+
+.form-control:focus + label {
+  top: -0.6rem;
+  background-color: #FFFF;
+  font-size: 0.8rem;
+  color: #1890ff;
+}
+
+.form-group label {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  font-size: 0.9rem;
+  color: #999;
+  transition: all 0.2s ease-in-out;
+}
+
+.invalid{
+  color: #ff0e51;
+}
+
+.invalid:focus + label{
+  top: -0.6rem;
+  font-size: 0.8rem;
+  color: #ff0e51;
+}
+
+.valid{
+  color:  #999;
+}
+
+.invalid:focus{
+  border: 1px solid var(--delete-and-error);
+}
+
+.invalid-border{
+  border: 1px solid var(--delete-and-error);
+}
+
+.errormessage{
+  margin-top: -15px;
+  font-size: 13px;
+}
+
+.valid-label{
+  top: -0.6rem !important;
+  background-color: #FFFF !important;
+  font-size: 0.8rem !important;
+  color: #999 ;
+}
+
+.invalid-label{
+  top: -0.6rem !important;
+  background-color: #FFFF !important;
+  font-size: 0.8rem !important;
+  color: var(--delete-and-error);
+}
+
+.invalid + label{
+  color: var(--delete-and-error);
+}

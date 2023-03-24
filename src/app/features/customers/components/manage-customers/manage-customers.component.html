@@ -1,0 +1,13 @@
+<form [formGroup]="customerDetailsForm" class="customer-details-form">
+  <label>Enter Details</label>
+  <app-input-text-box type="text" placeHolder="First Name"
+                      [formControl]="$any(form['firstName'])"></app-input-text-box>
+  <app-input-text-box type="text" placeHolder="last Name"
+                      [formControl]="$any(form['lastName'])"></app-input-text-box>
+  <app-input-text-box type="text" placeHolder="Email"
+                      [formControl]="$any(form['email'])"></app-input-text-box>
+  <div class="submit-btn">Submit</div>
+</form>
+<div class="table-area">
+
+</div>

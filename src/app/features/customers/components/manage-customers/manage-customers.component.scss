@@ -1,0 +1,42 @@
+.customer-details-form{
+  width: 20vw;
+  display: flex;
+  flex-wrap: wrap;
+  left: 2rem;
+  top: 2rem;
+  position: absolute;
+  margin: auto;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.customer-details-form app-input-text-box{
+  width: 100%;
+  position: relative;
+}
+
+.submit-btn{
+  text-align: center;
+  font-weight: 500;
+  color: #ffffff;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.5rem;
+  text-transform:uppercase;
+  background-color: var(--primery-color);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px 0px;
+}
+
+.customer-details-form label{
+  color: var(--primery-color);
+  font-size: 22px;
+  margin-bottom: 2rem;
+}
+
+.table-area{
+  width: 70vw;
+  height: 100vh;
+  background-color: #1890ff;
+  right: 0;
+  position: absolute;
+}

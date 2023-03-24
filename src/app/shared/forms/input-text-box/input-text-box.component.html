@@ -1,0 +1,16 @@
+<div class="form-main">
+  <div class="form-group">
+    <input [type]="type"
+           id="{{placeHolder|spaceReplace:'_'}}"
+           [formControl]="$any(ngControl.control)"
+           class="form-control"
+           [class]="ngControl.control?.invalid && ngControl.touched?'invalid invalid-border':'valid'">
+    <label for="{{placeHolder|spaceReplace:'_'}}"
+           [class.valid-label]="ngControl.control?.valid && ngControl.touched"
+           [class.invalid-label]="ngControl.control?.invalid && ngControl.touched && ngControl.control?.value.length>0"
+           [class.invalid]="ngControl.control?.invalid && ngControl.touched">{{placeHolder}}</label>
+  </div>
+  <div class="invalid errormessage"
+       *ngIf="ngControl.control?.errors && ngControl.touched">please enter valid {{placeHolder}}
+  </div>
+</div>
