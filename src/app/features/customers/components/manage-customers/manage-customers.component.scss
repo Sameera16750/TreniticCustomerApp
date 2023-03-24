@@ -24,7 +24,8 @@
   padding: 0.5rem;
   text-transform:uppercase;
   background-color: var(--primery-color);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px 0px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px 0;
+  cursor: pointer;
 }
 
 .customer-details-form label{
@@ -39,4 +40,61 @@
   background-color: #1890ff;
   right: 0;
   position: absolute;
+  padding: 1rem;
+}
+
+.table-area label{
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.table-area .table{
+  margin-top: 1rem;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 	0 0 11px 1px rgba(0,0,0,0.14),
+  0 0 19px 14px rgba(0,0,0,0.03);
+  border:	1px solid rgba(0,0,0,0);
+}
+
+.delete-btn{
+  background-color: var(--delete-and-error);
+  color: #ffffff !important;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px 0;
+}
+
+.table-filter-area{
+  height: 50px;
+  width: 30%;
+  padding: 5px;
+  margin-right: 0;
+  margin-left: auto;
+  display: flex;
+}
+
+.table-filter-area input{
+  width: 70%;
+  height: 100%;
+}
+
+.table-filter-area .filter-btn{
+  width: 25%;
+  margin-right: 0;
+  margin-left: auto;
+  text-align: center;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 3px;
+  background-color: var(--primery-color);
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px 0;
+  cursor: pointer;
+}
+
+.filter-btn label{
+  font-size: 16px;
 }

@@ -1,13 +1,41 @@
 <form [formGroup]="customerDetailsForm" class="customer-details-form">
   <label>Enter Details</label>
   <app-input-text-box type="text" placeHolder="First Name"
-                      [formControl]="$any(form['firstName'])"></app-input-text-box>
-  <app-input-text-box type="text" placeHolder="last Name"
-                      [formControl]="$any(form['lastName'])"></app-input-text-box>
+                      [formControl]="$any(form['FirstName'])"></app-input-text-box>
+  <app-input-text-box type="text" placeHolder="Last Name"
+                      [formControl]="$any(form['LastName'])"></app-input-text-box>
   <app-input-text-box type="text" placeHolder="Email"
-                      [formControl]="$any(form['email'])"></app-input-text-box>
-  <div class="submit-btn">Submit</div>
+                      [formControl]="$any(form['Email'])"></app-input-text-box>
+  <div class="submit-btn" (click)="saveCustomer()">Submit</div>
 </form>
 <div class="table-area">
-
+  <label>Customers</label>
+  <div class="table">
+    <div class="table-filter-area">
+      <input nz-input placeholder="First Name" [(ngModel)]="searchValue" nzSize="large" />
+      <div class="filter-btn" (click)="getCustomersByName(searchValue)">
+        <label>Search</label>
+      </div>
+    </div>
+    <nz-table #basicTable [nzPageSize]="7" [nzData]="listOfData">
+      <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email </th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.FirstName }}</td>
+        <td>{{ data.LastName }}</td>
+        <td>{{ data.Email }}</td>
+        <td>
+          <a class="delete-btn" (click)="verifyDelete(data.id)">Delete</a>
+        </td>
+      </tr>
+      </tbody>
+    </nz-table>
+  </div>
 </div>
